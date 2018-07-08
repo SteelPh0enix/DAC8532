@@ -9,6 +9,9 @@ References (very poorly generated, i'd recommend looking at docs in .hpp file) c
 Compile with `g++ -c DAC8532.cpp -lbcm2835` and link with your code. Or just compile everything at whole. Maybe i'll provide makefile soon.
 To be honest, provided example should be enough. If not sure, read comments inside .hpp and you should be fine.
 
+**IMPORTANT**
+Oh, and remember - by default, the channels are in high impedance mode. To use them, you have to set their power down mode to none. It's all in the example.
+
 ## Example
 
 ```cpp
