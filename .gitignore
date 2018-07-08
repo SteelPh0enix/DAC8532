@@ -32,3 +32,4 @@
 *.app
 
 doc/
+.vscode/
