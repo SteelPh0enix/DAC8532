@@ -93,6 +93,12 @@ public:
     */
     void set_power_down_mode(Channel channel, PowerDownMode power_down_mode);
 
+    //! Closes SPI and GPIO. Warning - use this only ONCE at the END of program. Remember to not use GPIO/SPI anymore after this call, or re-open it before doing so. In case of using multiple libs which use BCM, just manually close GPIO, SPI and other stuff you used.
+    /*!
+        \return true if cleaned up successfully, false if not.
+    */
+    bool cleanup() const;
+
 private:
     uint8_t m_cs{};
     double m_ref_v{};

@@ -68,6 +68,11 @@ void DAC8532::set_power_down_mode(Channel channel, PowerDownMode power_down_mode
     disable_dac();
 }
 
+bool DAC8532::cleanup() const {
+    bcm2835_spi_end();
+    return static_cast<bool>(bcm2835_close());
+}
+
 void DAC8532::enable_dac() const {
     bcm2835_gpio_write(m_cs, LOW);
 }
