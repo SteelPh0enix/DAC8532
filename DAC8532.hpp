@@ -25,7 +25,7 @@ class DAC8532 {
 
 public:
 
-    //! Enumeration for channel used. AB is for both channels
+    //! Enumeration for channel used.
     enum class Channel {
         A, /*!< Channel A */
         B  /*!< Channel B */
